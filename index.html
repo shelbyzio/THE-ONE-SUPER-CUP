@@ -3,201 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Tokyo - Travel & Inspire</title>
+    <title>The One Community - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #0a0a0a;
-            color: white;
-            scroll-behavior: smooth;
-        }
-
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                        url('THE ONE  PRO LEAGUE.mp4');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-        }
-
-        .tour-card {
-            transition: transform 0.3s ease, filter 0.3s ease;
-            filter: grayscale(40%);
-        }
-
-        .tour-card:hover {
-            transform: translateY(-10px);
-            filter: grayscale(0%);
-        }
-
-        .video-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-        }
-
-        .line-accent {
-            width: 50px;
-            height: 2px;
-            background-color: #ff4d4d;
-            display: inline-block;
-        }
-
-        .nav-link:hover {
-            color: #ff4d4d;
-        }
-
-        .custom-cursor {
-            cursor: pointer;
-        }
+        body { font-family: 'Montserrat', sans-serif; background-color: #0a0a0a; color: white; scroll-behavior: smooth; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop'); background-size: cover; background-position: center; height: 80vh; }
+        .tour-card { transition: transform 0.3s ease, filter 0.3s ease; filter: grayscale(40%); }
+        .tour-card:hover { transform: translateY(-10px); filter: grayscale(0%); }
+        .nav-link:hover { color: #ff4d4d; }
+        .coin-card-modern { transition: transform 0.3s ease; border: 1px solid #333; overflow: hidden; }
+        .coin-card-modern:hover { transform: scale(1.02); border-color: #dc2626; }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header class="fixed w-full z-50 transition-all duration-300 px-8 py-6 flex justify-between items-center bg-transparent">
+    <header class="fixed w-full z-50 transition-all duration-300 px-6 py-4 flex justify-between items-center bg-black/80 backdrop-blur-sm">
         <div class="flex items-center gap-2">
             <div class="w-3 h-3 bg-red-600 rounded-full"></div>
-            <span class="font-bold tracking-widest text-lg">THE ONE COMMUNITY</span>
+            <span class="font-bold tracking-widest text-sm md:text-lg">THE ONE COMMUNITY</span>
         </div>
-        
         <nav class="hidden md:flex gap-8 text-xs uppercase tracking-widest">
             <a href="#" class="nav-link text-red-500">Home</a>
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Tours</a>
             <a href="#" class="nav-link">Winner</a>
-            <a href="#" class="nav-link">Reviews</a>
             <a href="#" class="nav-link">Contacts</a>
         </nav>
-
-        <div>
-            <i class="fa-solid fa-magnifying-glass text-lg cursor-pointer"></i>
-        </div>
+        <div class="md:hidden"><i class="fa-solid fa-bars text-lg"></i></div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg relative flex items-center px-10 md:px-20">
+    <section class="hero-bg relative flex items-center px-6 md:px-20">
         <div class="max-w-4xl">
-            <h1 class="text-7xl md:text-9xl font-black leading-tight tracking-tighter">
-                THE ONE<br>COMMUNITY
-            </h1>
-            
-            
-        </div>
-
-        <!-- Sidebar Indicators -->
-        <div class="absolute right-10 top-1/2 -translate-y-1/2 flex flex-col items-end gap-4 text-xs font-bold text-gray-500">
-            <span></span>
-            <span></span>
-            <div class="flex items-center gap-4">
-                <span class="text-white text-2xl">BE UNIQUE</span>
-                <div class="w-12 h-[2px] bg-white"></div>
-            </div>
-            <span></span>
-            <span></span>
+            <h1 class="text-5xl md:text-9xl font-black leading-tight tracking-tighter">THE ONE<br>COMMUNITY</h1>
         </div>
     </section>
 
-    <!-- Popular Tours Section -->
-    <section class="py-24 px-10 md:px-20 bg-[#0f0f0f]">
-        <div class="text-center mb-16">
+    <section class="py-16 px-6 md:px-20 bg-[#0f0f0f]">
+        <div class="text-center mb-12">
             <p class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-2">Get Unforgettable Emotions</p>
-            <h2 class="text-3xl font-bold uppercase tracking-widest">BE UNIQUE FROM OTHERS</h2>
+            <h2 class="text-2xl md:text-3xl font-bold uppercase tracking-widest">BE UNIQUE FROM OTHERS</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Tour 1 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <div class="tour-card relative group overflow-hidden rounded-sm cursor-pointer">
-                <img src="supercup1.jpg" alt="Tour 1" class="w-full h-[450px] object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-xl font-bold">PRO LEAGUE SEASON 2</h3>
-                    <p class="text-xs text-gray-300 mt-2">“Not just a game”</p>
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop" alt="Card 1" class="w-full h-[300px] md:h-[450px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-lg font-bold">PRO LEAGUE</h3>
                 </div>
             </div>
-            <!-- Tour 2 -->
             <div class="tour-card relative group overflow-hidden rounded-sm cursor-pointer">
-                <img src="PWAUNG (1).mp4" alt="Tour 2" class="w-full h-[450px] object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-xl font-bold">PRO LEAGUE PLAYERS</h3>
-                    <p class="text-xs text-gray-300 mt-2">“Focus. Grind. Dominate..!”</p>
+                <img src="https://images.unsplash.com/photo-1526749838127-142289650035?q=80&w=2070&auto=format&fit=crop" alt="Card 2" class="w-full h-[300px] md:h-[450px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-lg font-bold">SUPER CUP</h3>
                 </div>
             </div>
-            <!-- Tour 3 -->
             <div class="tour-card relative group overflow-hidden rounded-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1528164344705-47542687990d?q=80&w=2070&auto=format&fit=crop" alt="Tour 3" class="w-full h-[450px] object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-xl font-bold">eFootball Coin ဝယ်ရန်</h3>
-                    <p class="text-xs text-gray-300 mt-2">“Real service, real trust, real results.”</p>
+                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2070&auto=format&fit=crop" alt="Card 3" class="w-full h-[300px] md:h-[450px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-lg font-bold">CHAMPIONS</h3>
                 </div>
             </div>
-            <!-- Tour 4 -->
             <div class="tour-card relative group overflow-hidden rounded-sm cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=80&w=2070&auto=format&fit=crop" alt="Tour 4" class="w-full h-[450px] object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
-                    <h3 class="text-xl font-bold">OUR CHAMPIONS</h3>
-                    <p class="text-xs text-gray-300 mt-2">“Not just win, proved why we deserve it.”</p>
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop" alt="Card 4" class="w-full h-[300px] md:h-[450px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-lg font-bold">COIN SHOP</h3>
+                </div>
+            </div>
+            <div class="tour-card relative group overflow-hidden rounded-sm cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=2070&auto=format&fit=crop" alt="Card 5" class="w-full h-[300px] md:h-[450px] object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                    <h3 class="text-lg font-bold">EVENTS</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Video & Inspiration Section -->
-    <section class="video-section relative px-10 md:px-20">
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-20">
-            <div class="space-y-8">
-                <h2 class="text-5xl md:text-6xl font-black uppercase leading-tight">
-                    IF NOT YOU,<br>THEN WHO?<br>
-                </h2>
-                <div class="flex items-center gap-4 cursor-pointer group">
-                    <div class="w-12 h-12 rounded-full border border-white flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-                        <i class="fa-solid fa-play ml-1"></i>
-                    </div>
-                    <span class="text-sm font-bold tracking-widest uppercase">Tap to view our Jerseys</span>
-                </div>
-                <p class="text-gray-400 max-w-md text-sm leading-relaxed">
+    <section class="py-16 px-6 md:px-20 bg-[#050505]">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-2xl md:text-4xl font-bold text-center mb-12 uppercase tracking-widest">eFootball Coin Packages</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <script>
+                    const coins = [500, 1500, 3000, 5000, 7500, 10000, 15000, 20000];
+                    const prices = [4.99, 9.99, 19.99, 29.99, 39.99, 49.99, 74.99, 99.99];
+                    const coinImages = Array(8).fill("https://images.unsplash.com/photo-1556742049-0cf8441ecd5a?auto=format&fit=crop&q=80&w=500");
                     
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4">
-                <div class="relative rounded-sm overflow-hidden group cursor-pointer h-48">
-                    <img src="https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <i class="fa-solid fa-play text-2xl"></i>
-                    </div>
-                </div>
-                <div class="relative rounded-sm overflow-hidden group cursor-pointer h-48 mt-8">
-                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
-                        <i class="fa-solid fa-play text-2xl"></i>
-                    </div>
-                </div>
+                    for(let i=0; i<8; i++) {
+                        document.write(`
+                            <div class="coin-card-modern bg-[#111] rounded-sm flex flex-col">
+                                <div class="h-32 md:h-48 overflow-hidden">
+                                    <img src="${coinImages[i]}" alt="Coin Pack" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 md:p-5 flex-grow flex flex-col justify-between">
+                                    <div>
+                                        <h3 class="text-[10px] md:text-sm font-bold uppercase tracking-widest text-gray-400 mb-1">Package ${i+1}</h3>
+                                        <p class="text-lg md:text-2xl font-black mb-2 md:mb-4">${coins[i]} Coins</p>
+                                    </div>
+                                    <button class="w-full py-2 md:py-3 border border-red-600 text-red-600 hover:bg-red-600 hover:text-white transition-all uppercase text-[9px] md:text-[10px] font-bold tracking-widest">$${prices[i]} - ဝယ်ယူမည်</button>
+                                </div>
+                            </div>
+                        `);
+                    }
+                </script>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-gray-800 text-center text-xs text-gray-500 tracking-widest uppercase bg-[#0a0a0a]">
-        <p>&copy; 2024 Travel Agency. All rights reserved.</p>
+    <footer class="py-8 border-t border-gray-800 text-center text-[10px] text-gray-500 tracking-widest uppercase bg-[#0a0a0a]">
+        <p>&copy; 2024 The One Community. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Simple scroll effect for header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-black/90', 'py-4');
-                header.classList.remove('py-6');
-            } else {
-                header.classList.remove('bg-black/90', 'py-4');
-                header.classList.add('py-6');
-            }
-        });
-    </script>
 </body>
 </html>
