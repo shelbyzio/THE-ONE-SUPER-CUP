@@ -8,16 +8,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at 50% -20%, #1f1f1f 0%, #050505 80%); color: white; scroll-behavior: smooth; }
-        .hero-bg { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.pinimg.com/736x/24/d5/68/24d5685afca388adf0b1850ab5acc0d3.jpg'); background-size: cover; background-position: center; height: 60vh; }
+        body { font-family: 'Inter', sans-serif; background: #050505; color: white; scroll-behavior: smooth; }
+        
+        /* Hero Section - အနက်ရောင်ဖုံးမှုကို 0.2 သို့ လျှော့ချထားသည် */
+        .hero-bg { 
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://i.pinimg.com/736x/24/d5/68/24d5685afca388adf0b1850ab5acc0d3.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            height: 60vh; 
+        }
         @media (min-width: 768px) { .hero-bg { height: 80vh; } }
         
         .tour-card { 
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
-            border: 1px solid rgba(255,255,255,0.05); 
+            border: 1px solid rgba(255,255,255,0.1); 
             min-width: 220px; 
-            background: rgba(15, 15, 15, 0.6);
-            backdrop-filter: blur(10px);
+            background: #111;
         }
         
         @media (min-width: 768px) { .tour-card { min-width: 260px; } }
@@ -25,7 +31,11 @@
         .tour-card:hover { 
             transform: translateY(-10px); 
             border-color: #dc2626; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5); 
+        }
+
+        /* Card ပုံပေါ်က အနက်ရောင်ဖုံးမှုကို ပေါ့ပါးအောင် ပြင်ထားသည် */
+        .overlay-effect {
+            background: rgba(0, 0, 0, 0.2);
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -45,12 +55,11 @@
             <a href="https://t.me/eMFootball_Players" target="_blank" class="hover:text-red-500 transition-colors">Group</a>
             <a href="https://t.me/Profit_Zio" target="_blank" class="hover:text-red-500 transition-colors">Contacts</a>
         </nav>
-        <div class="md:hidden text-gray-300"><i class="fa-solid fa-bars text-lg"></i></div>
     </header>
 
     <section class="hero-bg relative flex items-center px-6 md:px-20">
         <div class="max-w-4xl">
-            <h1 class="text-4xl md:text-9xl font-black leading-tight tracking-tighter bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">THE ONE<br>SUPER CUP</h1>
+            <h1 class="text-4xl md:text-9xl font-black leading-tight tracking-tighter text-white">THE ONE<br>SUPER CUP</h1>
         </div>
     </section>
 
@@ -61,41 +70,39 @@
         </div>
 
         <div class="flex gap-4 overflow-x-auto no-scrollbar pb-8">
+            <!-- Card 1 -->
             <a href="https://shelbyzio.github.io/supercupEPL/" target="_blank" class="tour-card group relative overflow-hidden rounded-xl cursor-pointer block w-[220px] md:w-[260px]">
-                <img src="supercup1.jpg" class="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                    <h3 class="text-sm md:text-xl font-bold uppercase">SUPER LEAGUE Players</h3>
+                <img src="supercup1.jpg" class="w-full h-[300px] object-cover">
+                <div class="absolute inset-0 overlay-effect flex flex-col justify-end p-4">
+                    <h3 class="text-sm md:text-xl font-bold uppercase text-white drop-shadow-lg">SUPER LEAGUE Players</h3>
                 </div>
             </a>
+            <!-- Card 2 -->
             <a href="https://shelbyzio.github.io/supercupEPL/" target="_blank" class="tour-card group relative overflow-hidden rounded-xl cursor-pointer block w-[220px] md:w-[260px]">
-                <img src="PWAUNG (27).jpg" class="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                    <h3 class="text-sm md:text-xl font-bold uppercase">Premier League</h3>
+                <img src="PWAUNG (27).jpg" class="w-full h-[300px] object-cover">
+                <div class="absolute inset-0 overlay-effect flex flex-col justify-end p-4">
+                    <h3 class="text-sm md:text-xl font-bold uppercase text-white drop-shadow-lg">Premier League</h3>
                 </div>
             </a>
+            <!-- Card 3 -->
             <a href="https://shelbyzio.github.io/LaligaSuperCup/" target="_blank" class="tour-card group relative overflow-hidden rounded-xl cursor-pointer block w-[220px] md:w-[260px]">
-                <img src="PWAUNG (28).jpg" class="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                    <h3 class="text-sm md:text-xl font-bold uppercase">Spain LaLiga</h3>
+                <img src="PWAUNG (28).jpg" class="w-full h-[300px] object-cover">
+                <div class="absolute inset-0 overlay-effect flex flex-col justify-end p-4">
+                    <h3 class="text-sm md:text-xl font-bold uppercase text-white drop-shadow-lg">Spain LaLiga</h3>
                 </div>
             </a>
+            <!-- Card 4 -->
             <a href="https://shelbyzio.github.io/SerieASuperCup/" target="_blank" class="tour-card group relative overflow-hidden rounded-xl cursor-pointer block w-[220px] md:w-[260px]">
-                <img src="PWAUNG (29).jpg" class="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                    <h3 class="text-sm md:text-xl font-bold uppercase">Italy Serie A</h3>
+                <img src="PWAUNG (29).jpg" class="w-full h-[300px] object-cover">
+                <div class="absolute inset-0 overlay-effect flex flex-col justify-end p-4">
+                    <h3 class="text-sm md:text-xl font-bold uppercase text-white drop-shadow-lg">Italy Serie A</h3>
                 </div>
             </a>
+            <!-- Card 5 -->
             <a href="https://shelbyzio.github.io/MyanmarSuperCup/" target="_blank" class="tour-card group relative overflow-hidden rounded-xl cursor-pointer block w-[220px] md:w-[260px]">
-                <img src="PWAUNG (31).jpg" class="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                    <h3 class="text-sm md:text-xl font-bold uppercase">Myanmar National League</h3>
-                </div>
-            </a>
-
-            <a href="https://shelbyzio.github.io/supercupEPL/" target="_blank" class="tour-card group relative overflow-hidden rounded-xl cursor-pointer block w-[220px] md:w-[260px]">
-                <img src="Blue and Black Modern Digital Marketing Agency Service Instagram Post - 2026-05-26T154614.945.jpg" class="w-full h-[300px] object-cover opacity-80 group-hover:opacity-100 transition-opacity">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
-                    <h3 class="text-sm md:text-xl font-bold uppercase">eFootball Coin</h3>
+                <img src="PWAUNG (31).jpg" class="w-full h-[300px] object-cover">
+                <div class="absolute inset-0 overlay-effect flex flex-col justify-end p-4">
+                    <h3 class="text-sm md:text-xl font-bold uppercase text-white drop-shadow-lg">Myanmar National League</h3>
                 </div>
             </a>
         </div>
